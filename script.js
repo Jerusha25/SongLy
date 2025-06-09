@@ -42,7 +42,7 @@ function showSongs(filter = "", letter = "") {
       })
       .forEach(song => {
         const li = document.createElement("li");
-        li.innerHTML = `<a href="${song.file}">${song.id}. ${song.title}</a>`;
+        li.innerHTML = `<a href="songs/${song.file}">${song.id}. ${song.title}</a>`;
         list.appendChild(li);
       });
   }
