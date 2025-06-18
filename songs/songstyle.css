@@ -37,3 +37,27 @@ a.back {
 a.back:hover {
   text-decoration: underline;
 }
+.audio-controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .audio-controls button {
+      background-color: #6c5ce7;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .audio-controls button:hover {
+      background-color: #341f97;
+      transform: scale(1.05);
+    }
