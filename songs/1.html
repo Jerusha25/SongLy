@@ -9,6 +9,14 @@
 <body>
   <div class="container">
     <h1>Run</h1>
+    <div class="audio-controls">
+      <button id="toggleBtn" onclick="togglePlayPause()">▶ Play</button>
+      <button onclick="stopAudio()">⏹ Stop</button>
+    </div>
+    <audio id="songAudio">
+      <source src="1.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
     <p>
 You were God from the outset
 Powerful and creative
@@ -39,5 +47,23 @@ Our God all glory to Your NameJesus
     </p>
     <a class="back" href="../index.html">← Back to Song List</a>
   </div>
+  <script>
+    const audio = document.getElementById("songAudio");
+    const toggleBtn = document.getElementById("toggleBtn");
+    function togglePlayPause() {
+      if (audio.paused) {
+        audio.play();
+        toggleBtn.innerText = "⏸ Pause";
+      } else {
+        audio.pause();
+        toggleBtn.innerText = "▶ Play";
+      }
+    }
+    function stopAudio() {
+      audio.pause();
+      audio.currentTime = 0;
+      toggleBtn.innerText = "▶ Play";
+    }
+  </script>
 </body>
 </html>
